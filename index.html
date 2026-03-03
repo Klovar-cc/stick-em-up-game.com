@@ -18,15 +18,22 @@
         html { scroll-behavior: smooth; }
         
         body {
-            background: linear-gradient(180deg, #6b5591 0%, #4a3b63 100%);
+            /* Smooth background color transition across entire page */
+            background: linear-gradient(180deg, #6b5591 0%, #3e3252 50%, #1e1828 100%);
             color: #ff99cc;
             font-family: 'Space Mono', monospace;
             margin: 0;
             padding: 0;
             text-align: center;
+            
+            /* ADDED: Background Art (Generic square pad outlines, avoiding 3M color) */
+            background-image: 
+                linear-gradient(rgba(255, 153, 204, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 153, 204, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px; /* Adjust size for "square ratio" squares */
         }
         
-        /* Each section takes up at least the full height of the screen */
+        /* Transparent sections for smooth scroll over one single background */
         .page-section {
             display: flex;
             flex-direction: column;
@@ -36,28 +43,26 @@
             width: 100%;
             padding: 40px 20px;
             box-sizing: border-box;
+            background: transparent; /* Essential for smooth transition */
         }
 
-        .container { max-width: 600px; width: 100%; }
+        .container { max-width: 600px; width: 100%; position: relative; z-index: 1; }
         
         .tagline { font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 20px; text-transform: lowercase; }
         .poster { max-width: 400px; width: 90%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); margin-bottom: 40px; }
         
         h1 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.1; margin-bottom: 40px; text-transform: lowercase; }
         
-        .learn-btn {
-            background-color: transparent;
+        /* ADDED: Plain text box instead of button, pointing down to rules section */
+        .look-down {
             color: #ff99cc;
-            padding: 15px 30px;
-            border: 2px solid #ff99cc;
-            border-radius: 12px;
+            padding: 10px;
             font-size: 1.2rem;
-            text-decoration: none;
+            text-decoration: none; /* Just plain text */
             font-weight: bold;
             text-transform: lowercase;
-            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(255, 153, 204, 0.5); /* Subtle indicator */
         }
-        .learn-btn:hover { background-color: #ff99cc; color: #5c4b82; }
 
         .donate-btn {
             background-color: #ff99cc;
@@ -77,18 +82,20 @@
 
         /* Succinct Rules Styling */
         .rules-box {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.25);
             border-radius: 15px;
             padding: 30px;
             text-align: left;
+            margin-top: 50px; /* Space from top of screen on scroll */
             margin-bottom: 30px;
             border: 1px solid rgba(255, 153, 204, 0.3);
+            backdrop-filter: blur(5px); /* Frosty glass effect */
         }
         .rules-box h2 { margin-top: 0; text-align: center; font-size: 1.8rem; text-decoration: underline; }
         .rules-box ul { padding-left: 20px; font-size: 1rem; line-height: 1.6; }
-        .rules-box li { margin-bottom: 15px; }
+        .rules-box li { margin-bottom: 15px; list-style-type: square; /* On brand list icons */ }
         
-        .legal { font-size: 0.8rem; opacity: 0.5; max-width: 500px; margin: 60px auto 0 auto; line-height: 1.4; }
+        .legal { font-size: 0.8rem; opacity: 0.5; max-width: 500px; margin: 60px auto 40px auto; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -98,11 +105,11 @@
             <div class="tagline">the tallest tower game</div>
             <img src="22222222222.png" alt="Stick-Em Up!" class="poster">
             <h1>stack 'em high.<br>shoot 'em low.</h1>
-            <a href="#the-rules" class="learn-btn">click to learn more ↓</a>
+            <a href="#the-rules" class="look-down">look down here.</a>
         </div>
     </div>
 
-    <div id="the-rules" class="page-section" style="background: linear-gradient(180deg, #4a3b63 0%, #2d243a 100%);">
+    <div id="the-rules" class="page-section">
         <div class="container">
             
             <div class="rules-box">
