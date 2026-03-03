@@ -18,22 +18,21 @@
         html { scroll-behavior: smooth; }
         
         body {
-            /* Smooth background color transition across entire page */
-            background: linear-gradient(180deg, #6b5591 0%, #3e3252 50%, #1e1828 100%);
+            /* FIXED: Layering the grid ON TOP of the dark gradient */
+            background: 
+                linear-gradient(rgba(255, 153, 204, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 153, 204, 0.05) 1px, transparent 1px),
+                linear-gradient(180deg, #6b5591 0%, #3e3252 50%, #1e1828 100%);
+            background-size: 50px 50px, 50px 50px, 100% 100%;
+            background-attachment: fixed; /* Keeps the background in place while scrolling */
+            
             color: #ff99cc;
             font-family: 'Space Mono', monospace;
             margin: 0;
             padding: 0;
             text-align: center;
-            
-            /* ADDED: Background Art (Generic square pad outlines, avoiding 3M color) */
-            background-image: 
-                linear-gradient(rgba(255, 153, 204, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 153, 204, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px; /* Adjust size for "square ratio" squares */
         }
         
-        /* Transparent sections for smooth scroll over one single background */
         .page-section {
             display: flex;
             flex-direction: column;
@@ -43,7 +42,7 @@
             width: 100%;
             padding: 40px 20px;
             box-sizing: border-box;
-            background: transparent; /* Essential for smooth transition */
+            background: transparent; 
         }
 
         .container { max-width: 600px; width: 100%; position: relative; z-index: 1; }
@@ -53,15 +52,14 @@
         
         h1 { font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.1; margin-bottom: 40px; text-transform: lowercase; }
         
-        /* ADDED: Plain text box instead of button, pointing down to rules section */
         .look-down {
             color: #ff99cc;
             padding: 10px;
             font-size: 1.2rem;
-            text-decoration: none; /* Just plain text */
+            text-decoration: none; 
             font-weight: bold;
             text-transform: lowercase;
-            border-bottom: 1px solid rgba(255, 153, 204, 0.5); /* Subtle indicator */
+            border-bottom: 1px solid rgba(255, 153, 204, 0.5); 
         }
 
         .donate-btn {
@@ -80,20 +78,19 @@
         }
         .donate-btn:hover { transform: scale(1.05); }
 
-        /* Succinct Rules Styling */
         .rules-box {
             background: rgba(0, 0, 0, 0.25);
             border-radius: 15px;
             padding: 30px;
             text-align: left;
-            margin-top: 50px; /* Space from top of screen on scroll */
+            margin-top: 50px; 
             margin-bottom: 30px;
             border: 1px solid rgba(255, 153, 204, 0.3);
-            backdrop-filter: blur(5px); /* Frosty glass effect */
+            backdrop-filter: blur(5px); 
         }
         .rules-box h2 { margin-top: 0; text-align: center; font-size: 1.8rem; text-decoration: underline; }
         .rules-box ul { padding-left: 20px; font-size: 1rem; line-height: 1.6; }
-        .rules-box li { margin-bottom: 15px; list-style-type: square; /* On brand list icons */ }
+        .rules-box li { margin-bottom: 15px; list-style-type: square; }
         
         .legal { font-size: 0.8rem; opacity: 0.5; max-width: 500px; margin: 60px auto 40px auto; line-height: 1.4; }
     </style>
