@@ -85,7 +85,7 @@
         }
         .donate-btn:hover { transform: scale(1.05); }
 
-        .rules-box {
+        .rules-box, .creator-note {
             background: rgba(0, 0, 0, 0.25);
             border-radius: 15px;
             padding: 30px;
@@ -95,15 +95,23 @@
             border: 1px solid rgba(255, 153, 204, 0.3);
             backdrop-filter: blur(5px); 
         }
+
+        .creator-note {
+            margin-top: 20px;
+            border-color: rgba(223, 189, 140, 0.3); /* Subtle parchment tint */
+        }
+
         .rules-box h2 { margin-top: 0; text-align: center; font-size: 1.8rem; text-decoration: underline; margin-bottom: 25px; }
+        .creator-note h3 { color: #DFBD8C; font-size: 1.2rem; margin-top: 0; text-transform: lowercase; text-decoration: underline; }
         
-        /* NEW STYLES FOR THE REFINED RULES */
         .rhyme-rules { margin-bottom: 25px; }
-        .rhyme-rules p { text-align: center; font-size: 1.1rem; font-style: italic; margin-bottom: 10px; color: #fff; }
+        .rhyme-rules p { text-align: center; font-size: 1.1rem; font-style: italic; margin-bottom: 15px; color: #fff; line-height: 1.4; }
         
         .rule-divider { border: 0; border-top: 1px dashed rgba(255, 153, 204, 0.5); margin: 25px 0; }
         
-        .dice-rules p { margin-bottom: 15px; font-size: 1rem; line-height: 1.6; }
+        .dice-rules p { margin-bottom: 10px; font-size: 1rem; line-height: 1.6; }
+        .dice-rules ul { margin-top: 0; margin-bottom: 15px; padding-left: 20px; }
+        .dice-rules li { margin-bottom: 8px; list-style-type: square; }
         .dice-rules strong { color: #fff; text-decoration: underline; text-decoration-color: #ff99cc; }
         
         .legal { font-size: 0.8rem; opacity: 0.5; max-width: 500px; margin: 60px auto 40px auto; line-height: 1.4; }
@@ -133,19 +141,51 @@
                 <h2>the rules of engagement</h2>
                 
                 <div class="rhyme-rules">
-                    <p>stack 'em high! roll the die, make your tower reach the sky.</p>
-                    <p>build your base, load the powder, store your ammo, make 'em cower.</p>
-                    <p>Stick 'Em Up!™ when you roll, one well-aimed shot: they pay the toll.</p>
+                    <p>stack 'em high! roll the die,<br>make your tower reach the sky.</p>
+                    <p>build your base, load the powder,<br>store your ammo, make 'em cower.</p>
+                    <p>Stick 'Em Up!™ when you roll,<br>one well-aimed shot: they pay the toll.</p>
                 </div>
 
                 <hr class="rule-divider">
 
                 <div class="dice-rules">
-                    <p><strong>rolls 1, 2 & 3 (the build):</strong> place your card flat, or fold it into a "taco" or "burger" for structural integrity.</p>
-                    <p><strong>rolls 4 & 5 (the bandolier):</strong> tear a piece off. place the sticky part on your tower. save the non-sticky extra in your bandolier. <em>(note: you can only crumple scraps into ammo once you have a stack of exactly 6.)</em></p>
-                    <p><strong>roll 6 (the showdown):</strong> yell "Stick 'Em Up!". choose one completed 6-stack ammo ball from your bandolier and target an opponent's tower.</p>
-                    <p><strong>the golden rule:</strong> you may only touch the card you are placing and the one card it connects to. hands off the rest.</p>
+                    <p><strong>roll 1-3 (the build):</strong> build your tower with an intact card</p>
+                    <ul>
+                        <li><strong>1:</strong> place your card flat</li>
+                        <li><strong>2:</strong> fold in half sticky-to-sticky (either way)</li>
+                        <li><strong>3:</strong> fold in half sticky-to-non-sticky (either way)</li>
+                    </ul>
+                    <p><em>*add the card to your tower</em></p>
+
+                    <p><strong>roll 4+5 (the two-timer):</strong> build your tower with a half-card, save the scraps for later</p>
+                    <ul>
+                        <li><strong>4:</strong> tear a card into one half sticky, one half not</li>
+                        <li><strong>5:</strong> tear a card into two identical halves</li>
+                    </ul>
+                    <p><em>*set aside the discarded half to create your ammo</em><br>
+                    <em>*once there are 6 discarded halves, crumple them up together and then begin creating another group of 6 called a bandolier</em></p>
+
+                    <p><strong>roll a 6 (the showdown):</strong> shoot for the moon!</p>
+                    <ul>
+                        <li><strong>6:</strong> yell "Stick 'Em Up!"</li>
+                        <li>*you MUST point finger-guns at the opponent(s) and they must stick their hands up in the air</li>
+                        <li>*if you have a full bandolier (six crumpled halves from rolling 4 or 5), you get to SHOOT IT at any opponents' tower.</li>
+                    </ul>
+                    
+                    <hr class="rule-divider">
+                    
+                    <p><strong>the golden rule:</strong> you may only touch the card you are placing, and the one card it connects to. hands off the rest.</p>
+                    <p><strong>the half-cocked:</strong> if you roll a six while no completed bandolier is available to you, the opponent(s) can shout "womp womp" at you and laugh at you</p>
+                    <p><strong>the grace:</strong> if anyone breaks the rules, like shifting or lifting their own entire tower, or if they mistakenly touch an extra card, that's okay. however repeat offenders should be heavily punished</p>
                 </div>
+            </div>
+
+            <div class="creator-note">
+                <h3>the goal</h3>
+                <p>i wanted to make a very fun tabbletop game that anyone can play with things they have in their junk drawer. all you need is one d6, and a stack of stick cards and a flat playing surface</p>
+                <br>
+                <h3>the reason i am doing this</h3>
+                <p>i am supposed to be getting a job, and that terrifies me. so, i will be pursuing this instead.</p>
             </div>
 
             <div class="legal">
