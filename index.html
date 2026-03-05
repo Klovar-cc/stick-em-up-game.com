@@ -39,12 +39,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
             width: 100%;
-            padding: 40px 20px;
+            padding: 60px 20px;
             box-sizing: border-box;
             background: transparent; 
+        }
+        
+        /* This makes ONLY the top section tall, removing the gap below */
+        .page-section:first-of-type {
+            min-height: 90vh;
+            justify-content: center;
         }
 
         .container { max-width: 600px; width: 100%; position: relative; z-index: 1; }
