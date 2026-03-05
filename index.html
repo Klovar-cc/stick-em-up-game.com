@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stick-Em Up!™</title>
+    <title>Stick 'Em Up!™</title>
     
     <link rel="icon" type="image/png" href="favicon2.png?v=2">
     
-    <meta property="og:title" content="Stick-Em Up!™">
+    <meta property="og:title" content="Stick 'Em Up!™">
     <meta property="og:description" content="stack 'em high. shoot 'em low. support the $1,000 build.">
     <meta property="og:image" content="https://stick-em-up-game.com/22222222222.png">
     <meta property="og:url" content="https://stick-em-up-game.com">
@@ -20,7 +20,7 @@
         html { scroll-behavior: smooth; }
         
         body {
-            /* FIXED: Layering the grid ON TOP of the dark gradient */
+            /* Layering the grid ON TOP of the dark gradient */
             background: 
                 linear-gradient(rgba(255, 153, 204, 0.05) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 153, 204, 0.05) 1px, transparent 1px),
@@ -35,6 +35,7 @@
             text-align: center;
         }
         
+        /* FIXED GAP: Top section gets min-height, bottom section just hugs the content */
         .page-section {
             display: flex;
             flex-direction: column;
@@ -45,7 +46,6 @@
             background: transparent; 
         }
         
-        /* This makes ONLY the top section tall, removing the gap below */
         .page-section:first-of-type {
             min-height: 90vh;
             justify-content: center;
@@ -106,7 +106,7 @@
     <div class="page-section">
         <div class="container">
             <div class="tagline">the tallest tower game</div>
-            <img src="22222222222.png" alt="Stick-Em Up!" class="poster">
+            <img src="22222222222.png" alt="Stick 'Em Up!" class="poster">
             <h1>stack 'em high.<br>shoot 'em low.</h1>
             <a href="#the-rules" class="look-down">scroll down here!</a>
         </div>
@@ -127,13 +127,14 @@
                 </ul>
             </div>
 
-            <a href="https://www.paypal.com/donate/?hosted_button_id=58CCB878MAVX2" class="donate-btn">
-                help me make Stick 'Em Up!™
+            <a href="https://ko-fi.com/stickemupgame" target="_blank" class="donate-btn">
+                support the creation of<br>
+                <span style="text-transform: none;">Stick 'Em Up!™</span>
             </a>
 
             <div class="legal">
                 this all came to me in a dream!<br><br>
-                stick-em up!™ is an independent game. not affiliated with, endorsed by, or sponsored by 3m or the post-it® brand. post-it® is a registered trademark of 3m.
+                Stick 'Em Up!™ is an independent game. not affiliated with, endorsed by, or sponsored by 3m or the post-it® brand. post-it® is a registered trademark of 3m.
             </div>
 
         </div>
